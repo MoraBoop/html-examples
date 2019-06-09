@@ -1,0 +1,35 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <style>
+            #cuadro{
+                height: 50px;
+                border-style: solid;                
+                
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function backgrd(){
+                 //comboBox
+                var combo = document.getElementById('cbColors');
+                var index = combo.options[combo.selectedIndex].value;
+                
+                //textArea
+                var ta = document.getElementById('cuadro');
+                ta.style.backgroundColor = index;
+
+            }
+        </script>
+        <div>
+            <select id="cbColors" onchange="backgrd();">
+                <option value="#D40D12">Red</option>
+                <option value="#227322">Green</option>
+                <option value="#233494">Blue</option>
+            </select>
+        </div>
+        <br/>
+        <div id="cuadro"></div>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+@import url(Styles/Header.css);
+@import url(Styles/Content.css);
+@import url(Styles/Footer.css);
+@import url(Class.css);
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Helvetica, Arial, sans-serif;
+	color: #262626;
+	/*background: #f2f2f2;*/ 
+	font-size: 1em;
+	line-height: 1.5em;/*ESPACION ENTRE LAS LINEAS DE UN PARRAFO*/
+    box-sizing: border-box;/*El borde sera dentro del mismo margen, todo se contiene dentro del modelo de caja*/
+}
+
+
+
+

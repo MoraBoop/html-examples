@@ -1,0 +1,116 @@
+<title> Juego de la serpiente </title>
+<script>
+    var canvas;
+    var ctx;
+    var w;
+    var h;
+    var comida;
+    var score;
+    var serpiente_array;
+    var cw;
+
+    function init() {
+        canvas = document.getElementById("canvas");
+        ctx = canvas.getContext("2d");
+        document.addEventListener("keydown", teclas, true);
+
+        w = canvas.width;
+        h = canvas.height;
+        cw = 10;
+        d = "right";
+        serpiente();
+        comidap();
+        score = 0;
+
+        if (typeof game_loop != "undefined") clearInterval(game_loop);
+        game_loop = setInterval(paint, 60);
+    }
+
+    function paint() {
+        ctx.fillStyle = "white";
+        ctx.fillRect(0, 0, w, h);
+        ctx.strokeStyle = "black";
+        ctx.strokeRect(0, 0, w, h);
+
+        var nx = snake_array[0].x;
+        var ny = snake_array[0].y;
+
+        if (d == "right") nx++;
+        else if (d == "left") nx--;
+        else if (d == "up") ny--;
+        else if (d == "down") ny++;
+
+        if (nx == -1 || nx == w / cw || ny == -1 || ny == h / cw || colisiones(nx, ny, snake_array)) {
+            init();
+            return;
+        }
+
+        if (nx == comida.x && ny == comida.y) {
+            var tail = {
+                x: nx,
+                y: ny
+            };
+            score++;
+
+            comidap();
+        } else {
+            var tail = snake_array.pop();
+            tail.x = nx;
+            tail.y = ny;
+        }
+
+        snake_array.unshift(tail);
+        for (var i = 0; i < snake_array.length; i++) {
+            var c = snake_array[i];
+            celda(c.x, c.y);
+        }
+        celda(comida.x, comida.y);
+        var score_text = "Score: " + score;
+        ctx.fillText(score_text, 5, h - 5);
+    }
+
+    function teclas(e) {
+        var key = e.which;
+
+        if (key == "37" && d != "right") d = "left";
+        if (key == "38" && d != "down") d = "up";
+        if (key == "39" && d != "left") d = "right";
+        if (key == "40" && d != "up") d = "down";
+    }
+
+    function colisiones(x, y, array) {
+        for (var i = 0; i < array.length; i++) {
+            if (array[i].x == x && array[i].y == y) return true;
+        }
+        return false;
+    }
+
+    function serpiente() {
+        var length = 5;
+        snake_array = [];
+        for (var i = length - 1; i >= 0; i--) {
+            snake_array.push({
+                x: i,
+                y: 0
+            });
+        }
+    }
+
+    function comidap() {
+        comida = {
+            x: Math.round(Math.random() * (w - cw) / cw),
+            y: Math.round(Math.random() * (h - cw) / cw),
+        };
+    }
+
+    function celda(x, y) {
+        ctx.fillStyle = "blue";
+        ctx.fillRect(x * cw, y * cw, cw, cw);
+        ctx.strokeStyle = "white";
+        ctx.strokeRect(x * cw, y * cw, cw, cw);
+    }
+</script>
+
+
+
+<canvas id="canvas" width="450" height="450" style="margin-top: -1px; margin-left: -5px;"></canvas>

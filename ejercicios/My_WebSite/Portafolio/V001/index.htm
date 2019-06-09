@@ -1,0 +1,95 @@
+<head>
+    <title>Titulo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="class.css">
+    <link rel="stylesheet" href="medias.css">
+    
+    
+        
+</head>
+
+<body>
+    <section class="col-3 soporte_menu"></section>
+    <section class="col-3 text_center cont_izq">
+        <!--<img class="logo" src="IMG/brand.png" />-->
+        <nav class="menu">
+            <a href="#about_me">
+                <li class="menu_01">ABOUT ME</li>
+            </a>
+            <a href="#portafolio">
+                <li>PORTAFOLIO</li>
+            </a>
+            <a href="#contact">
+                <li>CONTACT ME</li>
+            </a>
+        </nav>
+    </section>
+
+    <section class="col-9 cont_der">
+        <article class="imagenes">
+            <img class="col-4" src="IMG/work/boy.jpg"/>
+            <img class="col-4" src="IMG/work/girl.jpg"/>
+            <img class="col-4" src="IMG/work/girl_mountain.jpg"/>
+            <img class="col-4" src="IMG/work/girl_train.jpg"/>
+            <img class="col-4" src="IMG/work/man_bench.jpg"/>
+            <img class="col-4" src="IMG/work/natureboy.jpg"/>
+        </article>        
+        <article id="about_me" class="col-12 about">
+            <h1>ACERCA DE MI</h1>
+            <p>_Ita anim iudicem imitarentur non noster arbitror sed fugiat multos, cillum 
+            appellat ut cupidatat ne illum ubi mentitum quo esse se fugiat quamquam 
+            eruditionem, noster possumus quo quibusdam quo sint laborum est illustriora si 
+            id minim praesentibus. Ad varias quae quid mandaremus, summis a eiusmod do 
+            magna. Tamen efflorescere arbitror veniam litteris. Admodum duis quamquam qui</p>
+            <div class="mi_foto">
+                <img class="foto" src="IMG/about/hab.jpg"/>
+            </div>
+            <p>_Ad eram vidisse, fore ullamco ne multos tamen, ea culpa distinguantur, pariatur 
+                duis senserit. Ut fugiat noster ipsum doctrina ex et illum reprehenderit. Cillum 
+                relinqueret iudicem malis probant, nam malis admodu</p>
+        </article>
+        <article id="portafolio" class="col-12 portafolio">
+            <h1>MI PORTAFOLIO</h1>
+            <div class="col-4">
+                <img src="IMG/portafolio/html.png"/>
+            </div>
+            <div class="col-4">
+                <img src="IMG/portafolio/css.png"/>
+            </div>
+            <div class="col-4">
+                <img src="IMG/portafolio/node.png" />
+            </div>
+            <div class="col-4">
+                <img src="IMG/portafolio/github.png" />
+            </div>
+            <div class="col-4">
+                <img src="IMG/portafolio/php.png" />    
+            </div>
+            <div class="col-4">
+                <img src="IMG/portafolio/bootstrap.png" />
+            </div>
+        </article>
+        
+        <article id="contact" class="col-12 contact">
+            <h1>CONTACTAME</h1>
+            <form>
+                <label>E-mail</label><br/>
+                <input type="text" class="textBox"/>
+                <br/>
+                <label>Asunto</label><br/>
+                <input type="text" class="textBox"/>
+                <br/>
+                <label>Mensaje</label><br/>
+                <textarea class="textArea"></textarea>
+                <br/>
+            </form>
+        </article>
+        
+        <article id="map" class="map col-12">
+        </article>
+        <script src="GoogleMaps.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+    </section>
+</body>

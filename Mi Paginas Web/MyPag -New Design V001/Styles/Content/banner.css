@@ -1,0 +1,65 @@
+/*BANNER DE LA PAGINA*/
+#banner{
+    margin-top: 60px;/*se baja el banner para que no haiga conflicto con la cabecera*/
+    position: relative;/*Se puede colocar una imagen sobre el cuando sea de tipo absolute*/
+    height: 440px;
+    overflow: hidden;/*escondemos los 10px de imagen que sobran*/
+}
+#banner img{
+    height: 450px;
+    width: 100%;
+    margin: 0;
+}
+
+/*CONFIGURACION DEL TEXTO DENTRO DEL BANNER*/
+#banner .contenedor{
+    position: absolute;/*Esto es para que se pueda posicionar dentro de su ancestro banner*/
+    /*mejor dicho se posiciona de acuerdo al banner*/
+    top: 26%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);/*Con este codigo ahora el texto siempre va estar ubicado al medio asi la pagina web se haga para escritorio o para phone siempre va estar centrado al medio el texto*/
+    color: #fff;
+}
+#banner div h1{
+    font-size: 46px;
+    line-height: 1.1em;
+    text-align: center;/*centramos texto*/
+}
+#banner div p{
+    text-align: center;/*centramos texto*/
+    font-size: 24px;
+}
+#banner div a{
+    text-decoration: none;/*Quitamos el subrayado de los enlaces*/
+}
+
+/*CONFIGURACION DE LOS ELEMENTOS DENTROS DEL BANNER*/
+#banner a:hover{
+    background:  rgba(51,51,51,0.5)
+}/*Codigo opcional ya que el tag<a> no esta siendo usado*/
+@media(min-width:480px){
+    #banner h2{
+        font-size: 40px;
+    } 
+    #banner a{
+        margin-top: 25px;
+    }
+}/*Opcional ya que los texto dentro del banner no se estan usando*/
+
+
+
+
+/**--------------CONDICIONES--------------**/
+/*Si el tamaño de la resolucion web es de (x*768) se aplican los cambios que se encuentran dentro de las llaves*/
+/*@media(min-width:768px){
+    #banner{
+        height: 380px;
+        overflow: hidden;/*Para esconder el pedazo de imagen que sobresale de los 380px*/
+/*    }    
+    #banner img{
+        height: 400px;
+        margin-top: -15px;/*para subir la imagen*/
+/*  }
+}*/
+
+

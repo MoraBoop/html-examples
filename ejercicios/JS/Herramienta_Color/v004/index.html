@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head> 
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <meta charset="utf-8" />
+        <title>Html Color Codes</title>
+        <meta name="keywords" content="html, color, codes, chart, picker, hex">
+    </head>
+    <body>
+        <div id="main">
+            <a name="HTML_Color_Picker"></a>
+            <div id="insertcolor">
+                <button onclick="CPklik()" style="float:left">Save color</button>
+                Insert your color code:
+                <input type="text" maxlength="7" value="FFFFFF" id="startcolor" name="startcolor">
+                <button id="newcolor">GO</button>
+            </div>
+            <div ID="CP" class="wrapper"></div>
+            <div id="container"></div>
+            <script src="script.js"></script>
+            <script type="text/javascript" language="javascript">
+                (function() {
+                    var Event = YAHOO.util.Event, picker, hexcolor;
+                    Event.onDOMReady(function(){
+                        picker = new YAHOO.widget.ColorPicker("container", {
+                        showhsvcontrols: true, showhexcontrols: true, showwebsafe: false 
+                        });
+                        picker.skipAnim=true;	
+                        var onRgbChange = function(o) {				
+                            setTimeout ("document.getElementById('yui-picker-hex').select()", 50);			
+                        }
+                        picker.on("rgbChange", onRgbChange);
+                        Event.on("newcolor", "click", function(e) {
+                            hexcolor = cc(document.getElementById('startcolor').value);
+                            picker.setValue([HexToR(hexcolor), HexToG(hexcolor), HexToB(hexcolor)], false); 
+                        });
+                    });
+                })();
+            </script>            
+        </div>	
+    </body>
+</html>

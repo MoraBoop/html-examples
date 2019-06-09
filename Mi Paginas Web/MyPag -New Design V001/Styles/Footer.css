@@ -1,0 +1,27 @@
+#pie {
+    height: 50px;
+	background: #b22222;
+	color: white;
+	text-align: center;
+    padding: 10px;
+}
+
+#pie section div{
+    display: block;
+    height: auto;
+    margin: 0 50px;
+}
+
+#pie section div img{
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+#pie section div img:hover{
+    background: rgba(255,255,255,0.2);
+}
+
+
+
+

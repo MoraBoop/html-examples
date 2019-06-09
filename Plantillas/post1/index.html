@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+/*dispositivos con ancho de pantalla menor a 320*/    
+@media only screen and (max-width: 320px){
+    .grid-container {
+    grid-template-columns: auto;
+    display: grid;
+    background: #1090ff;
+    padding: 10px;
+    }
+}
+
+/*dispositivos con ancho de pantalla mayor igual a 321*/    
+@media only screen and (min-width: 320px){
+    
+}
+
+/*dispositivos con ancho de pantalla mayor a 720*/ 
+@media only screen and (min-width: 720px){
+    .grid-container {
+    grid-template-columns: auto auto auto;
+    display: grid;
+    grid-gap: 10px;
+    background: #ff0000;
+    padding: 10px;
+    }
+    body {
+        background: #13245d;
+    }
+}
+
+/*dispositivos con ancho de pantalla mayor a 1024*/ 
+@media only screen and (min-width: 1024px){
+    
+}
+
+
+</style>
+<body>
+    <div class="grid-container">
+        <div class="item1">
+            <h2>Title</h2>
+            <h3>SubTitle</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi eligendi 
+                excepturi fuga reiciendis deserunt quis earum dicta necessitatibus facilis 
+                tempore facere, cupiditate iure qui, animi placeat consectetur voluptatem 
+                autem perspiciatis!</p>
+            <img src="img.jpg" style="height: auto; width: 100%;"  alt="img.jpg">
+        </div>
+        <div class="item2">
+            <h2>Title</h2>
+            <h3>SubTitle</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi eligendi 
+                excepturi fuga reiciendis deserunt quis earum dicta necessitatibus facilis 
+                tempore facere, cupiditate iure qui, animi placeat consectetur voluptatem 
+                autem perspiciatis!</p>
+            <img src="img.jpg" style="height: auto; width: 100%;"  alt="img.jpg">
+        </div>
+        <div class="item3">
+            <h2>Title</h2>
+            <h3>SubTitle</h3>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Commodi eligendi 
+                excepturi fuga reiciendis deserunt quis earum dicta necessitatibus facilis 
+                tempore facere, cupiditate iure qui, animi placeat consectetur voluptatem 
+                autem perspiciatis!</p>
+            <img src="img.jpg" style="height: auto; width: 100%;"  alt="img.jpg">
+        </div>
+    </div>
+
+</body>
+</html>

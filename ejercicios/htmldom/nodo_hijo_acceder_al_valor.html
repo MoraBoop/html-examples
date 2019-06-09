@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Problema</title>
+<link rel="StyleSheet" href="estilos.css" type="text/css">
+</head>
+<body>
+<h1 id="titulo">Este es el título original</h1> 
+<input type="button" value="Cambiar Texto" onClick="cambiarTexto()">
+</body>
+<script>
+    function cambiarTexto(){
+        var titulo = document.getElementById('titulo');
+        titulo.childNodes[0].nodeValue = 'Nuevo titulo';
+    }
+</script>
+</html>

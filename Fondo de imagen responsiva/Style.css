@@ -1,0 +1,11 @@
+﻿/*Fondo de la pagina web*/
+.fondoMain{
+background-image: url(IMGS/fondo/How-to-secure-DJ-gig.jpg); 
+background-repeat: no-repeat; 
+background-size: cover; 
+background-attachment: fixed; 
+background-position: center center;
+}
+
+/*Estilo general*/
+body {margin: 0;padding: 0;font-family: Helvetica, Arial, sans-serif;color: white;font-size: 1em;line-height: 1.5em;/*Espacio entre cada linea de texto*/}

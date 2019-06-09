@@ -1,0 +1,71 @@
+/*FIJAR CABECERA Y ESTILO GENERALES DE ESTA*/
+#cabecera{
+	background-color: #b22222;
+	color: white;
+	height: 60px;
+    width: 100%; /* hacemos que la cabecera ocupe el ancho completo de la página */
+	left: 0; /* Posicionamos la cabecera al lado izquierdo */
+	top: 0; /* Posicionamos la cabecera pegada arriba */
+	position: fixed; /* Hacemos que la cabecera tenga una posición fija */
+    z-index: 100;/*Siempre este por delante de todos lo elementos*/
+    box-shadow: 0 1px 20px 1px black;/*Efecto sombreado (dezp"izq-der",dezp"arri-aba",difuminado,difuminado,color)*/
+}
+#cabecera .contenedor{
+    display: table;/*El contenedor se encuentra solo y ya esta completamente responsivo*/
+}
+
+/**LOGO**/
+#logo{
+    float: left;
+    color: white;
+    text-decoration: none;
+    height: 60px;
+}	
+#logo .SupLogo { 
+    padding-top: 10px;/*Bajar un poco el logo*/
+    display: block;
+	font-weight: 700;/*Letra hancha*/
+	font-size: 32px;
+}	
+#logo .SubLogo {
+    display: block;
+    font-weight: 300;/*Letra tan hancha*/
+    padding-top: 2px;
+	font-size: 16px;
+}
+
+/**MENU**/
+#menu{
+	float: right;/*Posicionar el bloque completo del nav hacia la derecha*/
+}
+#menu ul{
+    /*Posicionar letras de la navegacion hacia a la derecha*/
+    margin: 0;
+	padding: 0;
+	list-style: none;
+	padding-right: 20px;
+}	
+#menu ul li{
+    /**Tamaño de los contenedores ALTO*/
+	display: inline-block;/*Colocarlos en modo fila row*/
+	line-height: 60px;/*Tamaño del contenedor*/
+}			
+#menu ul li a{
+    /**Tamaño de los contenedores ANCHO*/
+    display: block;/*Encerramos dentro de un bloque a cada enlace*/
+	padding: 0 20px;/*Agrandar el hancho mediante el padding*/
+	text-decoration: none;/*Quitar el estilo del link*/
+    color: white;/*letra de los enlaces*/
+}
+
+nav ul li a:hover {
+    background: rgba(0,195,182,0.8);
+}
+
+
+
+
+
+
+
+

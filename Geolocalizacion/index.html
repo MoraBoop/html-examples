@@ -1,0 +1,45 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"> 
+    <title>MAPA</title> 
+</head> 
+
+<body> 
+    <button onclick="getLocation()">Try It</button> 
+    <p id="demo"></p> 
+    <script> 
+        var x = document.getElementById("demo"); 
+        function getLocation() { 
+            if (navigator.geolocation) { 
+                navigator.geolocation.getCurrentPosition(showPosition, showError); 
+            } else { 
+                x.innerHTML = "Geolocation is not supported by this browser."; 
+            } 
+        } 
+        function showPosition(position) { 
+            x.innerHTML = "Latitude: " + position.coords.latitude +  
+            "<br>Longitude: " + position.coords.longitude;  
+        } 
+        function showError(error) { 
+        switch(error.code) { 
+            case error.PERMISSION_DENIED: 
+                x.innerHTML = "El usuario denego la solicitud de la Geolocalizacion" 
+                break; 
+            case error.POSITION_UNAVAILABLE: 
+                x.innerHTML = "Informacion de la localizacion no disponible" 
+                break; 
+            case error.TIMEOUT: 
+                x.innerHTML = "The request to get user location timed out." 
+                break; 
+            case error.UNKNOWN_ERROR: 
+                x.innerHTML = "An unknown error occurred." 
+                break; 
+            }
+        } 
+    </script> 
+    <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script> 
+</body> 
+</html> 

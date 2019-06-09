@@ -1,0 +1,36 @@
+body{
+    margin: 0%;
+    padding: 0%;
+}
+
+ul{
+    list-style: none;
+    border: 1px solid black;
+    margin: 0%;
+    height: 60px;
+    position: relative;
+}
+
+li {
+    display: inline-block;
+    border: 1px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.left {
+    position: absolute;
+    left: 0;
+}
+
+.right {
+    position: absolute;
+    right: 0;
+}
+
+
+@media only screen and (max-width: 600px){
+    .right{
+        display: none;
+    }
+}

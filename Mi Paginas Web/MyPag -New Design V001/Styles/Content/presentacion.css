@@ -1,0 +1,18 @@
+/*PRESENTACION*/
+#presentacion{
+    margin: 0;/*Que no haiga ningun espacio entre otros contenedor subprincipales*/
+    padding-top: 10px;
+    padding-bottom: 20px;
+    background: #D1ECE8;
+}
+#presentacion h2{
+    text-align: center;/*centrar texto*/
+    margin-top: 10px;
+    font-size: 40px;
+    line-height: 1.2em;/*saltos de linea*/
+}
+#presentacion p{
+    width: 98%;
+    margin: auto;
+    text-align: center;
+}

@@ -1,0 +1,21 @@
+/***ENTORNO***/
+#entornos{
+    margin: 0;/*Que no haiga ningun espacio entre otros contenedor subprincipales*/
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+#entornos h3{
+    text-align: center;/*centrar texto*/
+    margin-top: 10px;
+    font-size: 42px;
+    line-height: 1.2em;/*saltos de linea*/
+    display: block;
+    width: auto;
+}
+#entornos p{
+    padding: 10px;
+    width: 98%;
+    margin: auto;
+    font-size: 42px;
+    text-align: center;
+}

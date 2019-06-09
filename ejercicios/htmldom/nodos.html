@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Problema</title>
+<link rel="StyleSheet" href="estilos.css" type="text/css">
+<script>
+
+function cantidadHijos(){
+  var lista=document.getElementById('bloque');
+  alert('La cantidad de hijos del nodo div es:'+lista.childNodes.length);  
+  var cadena="";
+  for(var x=0;x<lista.childNodes.length;x++) 
+  {
+    if (lista.childNodes[x].nodeType==Node.TEXT_NODE)
+      cadena=cadena+"Nodo creado por el salto de linea\n";
+    if (lista.childNodes[x].nodeType==Node.ELEMENT_NODE)
+      cadena=cadena+"Nodo tipo Elemento\n";
+  }
+    alert(cadena);
+}
+
+</script>
+</head>
+    
+<body>
+<div id="bloque">
+  <p>Este es el primer párrafo</p>
+  <p>Este es el segundo párrafo</p>
+  <p>Este es el tercer párrafo</p>
+    <br />
+</div>
+<input type="button" value="Cantidad de Hijos del DIV" onClick="cantidadHijos()">
+</body>
+    
+</html>

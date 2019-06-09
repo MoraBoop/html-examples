@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Servicios Digitales | Home</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="index-res.css">
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+    <link rel="icon" href="fav/favicon.ico">
+
+</head>
+<body>
+    <div class="w3-container w3-padding">
+        <span class="w3-xxlarge title"><i class="fab fa-digital-ocean w3-text-green"></i> <b> Servicios</b><span class="w3-opacity"> Digitales</span></span><br>
+        <span>Tel: 1-433-1310</span>
+    </div>    
+    <!--Barra Navegacion-->
+    <nav>
+        <!--Desktop-->
+        <div class="w3-bar w3-black">
+            <b>
+                <a href="index.html" class="w3-bar-item w3-button">Home</a>
+                <a href="about.html" class="w3-bar-item w3-button w3-hide-small">About us</a>
+                <a href="service.html" class="w3-bar-item w3-button w3-hide-small">Servicios</a>
+                <a href="contact.html" class="w3-bar-item w3-button w3-hide-small">Contacto</a>
+                <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+            </b>
+        </div>        
+        <!--Movil-->    
+        <div id="demo" class="w3-bar-block w3-black w3-hide w3-hide-large w3-hide-medium">
+            <a href="about.html" class="w3-bar-item w3-button">About us</a>
+            <a href="service.html" class="w3-bar-item w3-button">Servicios</a>
+            <a href="contact.html" class="w3-bar-item w3-button">Contacto</a>
+        </div>        
+    </nav>
+    <script>
+        function myFunction() {
+            var x = document.getElementById("demo");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+    </script>
+    <!--/-->
+    
+    <!--Servicios-->
+    <section id="servicios" class="w3-container w3-small">
+        <p class="w3-medium">Dentro de nuestros servicios, ofrecemos todo tipo de servicios que sean tecnicos desde reparar un gadged hasta crear un sistema de red con niveles de seguridad entre usuarios y administrador</p>
+
+        <!--SubTitle-->
+        <h2 class="title w3-text-green"><b>Servicios</b></h2>
+        <br>
+        
+        <div class="w3-row">
+            
+            <!--Servicio-->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom w3-row services">
+                <div class="w3-col w3-center" style="width: 50px;">
+                    <i class="fas fa-desktop w3-text-green w3-xxlarge"></i>
+                </div>
+                <div class="w3-rest w3-container">
+                    <b><span class="w3-text-blue-gray w3-medium">Redes informaticas</span></b>
+                    <br>
+                    <span>Administracion, soporte y cableado de redes informaticas LAN y WLAN Usando el estandar OSI T568A - T568B</span>
+                </div>
+            </div>
+            <!--Servicio-->   
+            <div class="w3-col l4 m6 s12 w3-margin-bottom w3-row services">
+                <div class="w3-col w3-center" style="width: 50px;">
+                    <i class="fas fa-phone-volume w3-text-green w3-xxlarge"></i>
+                </div>
+                <div class="w3-rest w3-container">
+                    <b><span class="w3-text-blue-gray w3-medium">Redes telefonicas</span></b>
+                    <br>
+                    <span>Administrar las llamadas inbound y distribuir los inbound y outbound entre areas de trabajo atravez de una linea</span>
+                </div>
+            </div>
+            <!--Servicio-->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom w3-row services">
+                <div class="w3-col w3-center" style="width: 50px;">
+                    <i class="fas fa-video w3-text-green w3-xxlarge"></i>
+                </div>
+                <div class="w3-rest w3-container">                
+                    <b><span class="w3-text-blue-gray w3-medium">Camaras de Video vigilancia</span></b>
+                    <br>
+                    <span>Instalacion, administracion y soporte de camaras de video vigilancia</span>
+                </div>
+            </div> 
+            <!--Servicio-->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom w3-row services">
+                    <div class="w3-col w3-center" style="width: 50px;">
+                        <i class="fas fa-cog w3-text-green w3-xxlarge"></i>
+                    </div>
+                <div class="w3-container w3-rest">
+                    <b><span class="w3-text-blue-gray w3-medium">Soporte Tecnico</span></b>
+                    <br>
+                    <span>Reparos de fallas, bugs y mantenimiento a Computadores, laptops y gadgeds usados por la empresa </span>
+                </div>
+            </div>
+            <!--Servicio-->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom w3-row services">
+                <div class="w3-col w3-center" style="width: 50px;">
+                    <i class="fas fa-microchip w3-text-green w3-xxlarge"></i>
+                </div>
+                <div class="w3-container w3-rest">
+                    <b><span class="w3-text-blue-gray w3-medium">Domotica</span></b>
+                    <br>
+                    <span>Integracion al internet of things, rediseñar la arquitectura de trabajo, automatizando deberes basicos</span>
+                </div>
+            </div>
+            <!--Servicio-->
+            <div class="w3-col l4 m6 s12 w3-margin-bottom w3-row services">
+                <div class="w3-col w3-center" style="width: 50px;">
+                    <i class="fas fa-lightbulb w3-text-green w3-xxlarge"></i>
+                </div>
+                <div class="w3-container w3-rest">
+                    <b><span class="w3-text-blue-gray w3-medium">Sistemas Electricos</span></b>
+                    <br>
+                    <span>Soporte, mantenimiento a cables de luz incluyendo la iluminacion, fugas y puntos de luz</span>
+                </div>
+            </div>            
+        </div>                        
+                
+        <div class="w3-container">
+            <p class="w3-xlarge title">Especialistas en el tech</p>
+            <p>En el servicio de soporte tecnico incluimos los siguientes servicios de manera adicional</p>
+            <div class="w3-row-padding">
+                <div class="w3-col l4 m12 s12 ">
+                    <div class="w3-card-2 w3-margin-bottom">
+                        <img src="tech1.jpg" alt="" style="width:100%; height:auto">
+                        <div class="w3-container w3-center">
+                            <p>Soporte tecnico y mantenimiento de Computadores, laptops, notebooks</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col l4 m12 s12 ">
+                    <div class="w3-card-2 w3-margin-bottom">
+                        <img src="tech2.jpg" alt="" style="width:100%; height:auto">
+                        <div class="w3-container w3-center">
+                            <p>Cambio y empastado de refrigerantes a los circuitos integrados</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="w3-col l4 m12 s12 ">
+                    <div class="w3-card-2 w3-margin-bottom">
+                        <img src="tech3.jpg" alt="" style="width:100%; height:auto">
+                        <div class="w3-container w3-center">
+                            <p>Chequeo de estado de los discos duros para evitar perdida de informacion</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>          
+    <!--/--> 
+    <!--Redes sociales-->
+    <div class="w3-container w3-center w3-dark-gray">
+        <b><p class="w3-xlarge">Redes Sociales</p></b>
+        <a href="https://www.facebook.com/Jaison-Mora-547396385614913" target="_blank">
+            <i class="fab fa-facebook-square w3-xxxlarge w3-text-indigo w3-text-white"></i>
+        </a>
+        <a href="https://www.youtube.com/channel/UClpUfzMlZdnZJVlEEu5wE8w?view_as=subscriber" target="_blank">
+            <i class="fab fa-youtube-square w3-xxxlarge w3-text-red w3-margin-left w3-text-white"></i>
+        </a>
+        <br><br>
+    </div>    
+</body>
+</html>

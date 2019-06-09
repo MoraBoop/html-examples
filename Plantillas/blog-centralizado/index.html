@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        header {
+            height: 280px;
+            background:dodgerblue;
+        }
+
+        footer {
+            height: 100px;
+            background: darkorchid;
+        }
+
+        .content {
+            width: 98%;
+            margin: auto;
+            border: 1px solid black;
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            height: 100%;
+        }
+        .grid-container{
+            display: grid;
+            grid-template-columns: auto auto;
+            grid-gap: 10px;
+            padding: 10px;
+            width: 100%;
+            height: 500px;
+        }
+        .grid-item {
+            background: crimson;
+        }
+        .item1{
+            grid-column: 1 / 2 span;
+            grid-row: 1; 
+        }
+        @media (min-width: 1024px){
+            .content{
+                width: 1000px;
+            }
+        }
+        .text_cent {
+            text-align: center;
+        }
+        .bigtext{
+            font-size: 74px;
+        }
+        .midiumtext{
+            font-size: 48px;
+        }
+        .smalltext{
+            font-size: 24px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="content text_cent bigtext">
+            header
+        </div>
+    </header>
+      <main>
+        <div class="content">
+            <section class="grid-container">
+                <article class="grid-item item1 text_cent smalltext">Articulo1</article>
+                <article class="grid-item item2 text_cent smalltext">Articulo2</article>
+                <article class="grid-item item3 text_cent smalltext">Articulo3</article>
+                <article class="grid-item item4 text_cent smalltext">Articulo4</article>
+                <article class="grid-item item5 text_cent smalltext">Articulo5</article>
+            </section>
+            <aside>right</aside>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="content">
+            footer
+        </div>
+    </footer>
+</body>
+</html>

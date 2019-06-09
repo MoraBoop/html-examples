@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Titulo de la pagina</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />        
+        
+        <style>
+            html, body{
+                height: 100%;
+            }
+            body{
+                margin: 0;
+                padding: 0;
+            }
+            #banner{
+                
+                position: relative;/*Se puede colocar una imagen sobre el cuando sea de tipo absolute*/
+            }
+            #banner img{
+                width: 100%;
+                height: 100%;
+            }
+            #banner .contenedor{
+                position: absolute;/*Esto es para que se pueda posicionar dentro de su ancestro banner*/
+                /*mejor dicho se posiciona de acuerdo al banner*/
+                top: 50%;
+                left: 50%;
+                transform: translateX(-50%) translateY(-50%);/*Con este codigo ahora el texto siempre va estar ubicado al medio asi la pagina web se haga para escritorio o para phone siempre va estar centrado al medio el texto*/
+                color: #fff;
+            }
+            #banner h2{
+                font-size: 28px;
+            }
+            #banner a{
+                display: block;
+                width: 100px;
+                color: #fff;
+                text-decoration: none;
+                padding: 4px;
+                margin-top: 1px;
+                border: 3px solid #fff;
+            }
+            #banner a:hover{
+                background:  rgba(51,51,51,0.5)
+            }
+            @media(min-width:480px){
+                #banner h2{
+                    font-size: 40px;
+                } 
+                #banner a{
+                    margin-top: 25px;
+                }
+            }
+            @media(min-width:768px){
+                #banner{
+                    height: 300px;
+                    overflow: hidden;/*Para esconder el pedazon de imagen que sobresale de los 300px*/
+                }    
+                #banner img{
+                    height: auto;
+                    margin-top: -100px;/*para subir la imagen*/
+                }
+            }
+            @media(min-width:1024px){
+                #banner img{
+                    margin-top: -200px;/*para subir la imagen*/
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <!--Etiquetas--><!--/Etiquetas-->
+        <!--Banner-->        
+        <section id="banner">
+            <img src="img/banner.jpg">
+            <div class="contenedor">
+                <h2>Instituto Tecnologico Wherner Von Braun</h2>
+                <p>Powered By: Jaison Mora Mora</p>
+                <a href="">Leer mas</a>
+            </div>
+        </section>
+    </body>
+</html>

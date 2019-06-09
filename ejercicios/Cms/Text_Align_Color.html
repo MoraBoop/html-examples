@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+    <head>        
+        <style>  
+            /*clases*/
+            .text_black{
+                color: black;                
+            }
+            .text_navi{
+                color: navy;                
+            }
+            .text_red{
+                color: red;
+            }
+            .text_green{
+                color: green;
+            }
+            .text_blue{
+                color: blue;
+            }
+            .container{
+                width: 100%;
+                text-align: center;                
+            }
+        </style>    
+    </head>
+    <body>
+        <div class="container">
+            <button type="button" onclick="derecha();">left</button>
+            <button type="button" onclick="centrar();">center</button>
+            <button type="button" onclick="izquierda();">right</button>
+            <button type="button" onclick="justificado();">justify</button>
+        </div>
+        <div style="word-wrap: break-word">
+            <p id="texto">Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum</p>        
+        </div>
+        <div class="container">
+            <button type="button" onclick="black();" style="width:20px;height:20px;border:none;background:black;"></button>
+            <button type="button" onclick="navi();" style="width:20px;height:20px;border:none;background:navy;"></button>
+            <button type="button" onclick="red();" style="width:20px;height:20px;border:none;background:red;"></button>
+            <button type="button" onclick="green();" style="width:20px;height:20px;border:none;background:green;"></button>
+            <button type="button" onclick="blue();" style="width:20px;height:20px;border:none;background:blue;"></button>            
+        </div>
+        <script>
+            //Alienacion de texto                        
+            function derecha(){
+                var der = document.getElementById('texto');
+                der.style.textAlign = 'left';
+            }            
+            function centrar(){
+                var centro = document.getElementById('texto');
+                centro.style.textAlign = 'center';
+            }            
+            function izquierda(){
+                var izq = document.getElementById('texto');
+                izq.style.textAlign = 'right';
+            }    
+            function justificado(){
+                var justificado = document.getElementById('texto');
+                justificado.style.textAlign = 'justify';
+            }
+        </script> 
+        <script>
+            //color de texto            
+            function black(){
+                var text_color = document.getElementById('texto');
+                text_color.className = 'text_black';
+            }
+            function navi(){
+                var text_color = document.getElementById('texto');
+                text_color.className = 'text_navi';
+            }
+            function red(){
+                var text_color = document.getElementById('texto');
+                text_color.className = 'text_red';
+            }
+            function green(){
+                var text_color = document.getElementById('texto');
+                text_color.className = 'text_green';
+            }
+            function blue(){
+                var text_color = document.getElementById('texto');
+                text_color.className = 'text_blue';
+            }
+        </script>
+    </body>        
+</html>

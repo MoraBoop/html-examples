@@ -1,0 +1,25 @@
+.contenedor{
+    width: 97%;/*el contenedor nunca va ocupar */
+    margin: auto;/*margen centrado*/
+    display: flex;/*Lo volvemos flexible*/
+    justify-content: center;/*Centra todos los items/obj que se encuentran dentro del contenedor*/
+    flex-wrap: wrap;/*Haremos que lo objtetos que no caben en la pagina bajen a abajo*/
+}
+
+.fondoSilver{
+    background-color: #E2E2E4;
+}
+
+
+/*--------CONDICIONALES--------*/
+
+
+/*si mientras en minimo en hancho sea 1024px se cumplen las siguientes condiciones*/
+@media(min-width:1024px){
+    /*condiciones*/
+    .contenedor{
+        width: 1000px;
+    }
+}
+
+

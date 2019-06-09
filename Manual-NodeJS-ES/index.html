@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+    <title>Manual NodeJS-ES</title>
+
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="icon" href="fav/favicon.ico">
+
+    <style>
+        body,h1,h2,h3,h4,h5 {font-family: "Poppins", sans-serif}
+        body {font-size:16px;}
+        .w3-half img{margin-bottom:-6px;margin-top:16px;opacity:0.8;cursor:pointer}
+        .w3-half img:hover{opacity:1}
+    </style>
+
+    <script src="menu-mobil.js"></script>
+</head>
+
+<body class="w3-light-grey">
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-green w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>Manual NodeJS</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="#Introduccion" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Introduccion</a> 
+            <a href="#Modulos" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Modulos</a> 
+            <a href="#Nucleo" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Nucleo de NodeJS</a>
+            <a href="#http" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">HTTP</a>
+            <a href="#fs" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">File System</a>
+            <a href="#url" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">URL</a>
+        </div>
+    </nav>
+
+    <!-- Top menu on small screens -->
+    <header class="w3-container w3-top w3-hide-large w3-green w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-green w3-margin-right" onclick="w3_open()">☰</a>
+        <span>Manual NodeJS</span>
+    </header>
+
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+    <!--Page Content-->    
+    <div class="w3-main w3-container" style="margin-left:340px; margin-right:40px">
+
+        <!--INTRODUCCION-->    
+        <div id="Introduccion" style="height:70px"></div>
+        <h2 class="w3-xxxlarge w3-text-gray"><b>Introduccion</b></h2>
+        <hr style="width:50px;border:5px solid gray" class="w3-round">
+
+        <h3>¿Que es Node js?</h3>
+        <ul>
+            <li>Es un framework de servidor.</li>
+            <li>Es de codigo abierto (open source).</li>
+            <li>Usa JavaScript en el servidor </li>
+            <li>Es multiplataforma, ya que funciona a bajo nivel</li>
+        </ul>
+    
+        <h3>¿Por qué usarlo?</h3>
+        <ul>
+            <li>Node usa la programacion asincrona.</li>
+            <li>Elimina los tiempos de espera y realiza varias funciones de manera simultanea.</li>
+            <li>No tiene un orden de lectura de codigo.</li>
+            <li>Node solo usa subprocesos lo que lo hace muy eficiente en memoria.</li>
+        </ul>
+    
+        <h3>¿Qué puedo hacer con Node?</h3>
+        <ul>
+            <li>Generar paginas con contenido dinamico.</li>
+            <li>Crear, abrir, leer, modificar, borrar y cerrar archivos de servidor.</li>
+            <li>Recopila datos de formulario.</li>
+            <li>Agrega, modifica y borra archivos de una base de datos.</li>
+        </ul>
+        
+        <h3>Download and Docs</h3>
+        <p></p><a href="https://nodejs.org/en/" target="_blank">Link de descarga</a></p>
+        <p><a href="https://nodejs.org/en/docs/" target="_blank">Documentacion</a></p>
+
+        <h3>Aplicacion Basica</h3>
+        <p>Vamos a crear nuestra primera aplicacion NodeJS. Lo guardaremos en la siguiente ruta C:\Node\</p>
+        <p><b>index.js</b></p>
+        <div class="w3-code jsHigh notranslate">
+            var http = require('http'); <br>
+            http.createServer(function (req, res) { <br>
+            res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+            res.end('Hello World!'); <br>
+            }).listen(8080);
+        </div>
+        <p>La aplicacion la ejecutamos desde la terminal </p>
+        <div class="w3-black w3-text-white w3-container">
+            <p>
+                <span class="w3-text-blue">/Documents/NodeJS</span>$ node index.js
+            </p>
+        </div>
+        <p>Nos dirigimos al navegador y escribimos en la url localhost:8080 y veremos el Hello World</p>
+
+        <!--MODULOS-->    
+        <div id="Modulos" style="height:70px"></div>
+        <h2 class="w3-xxxlarge w3-text-gray"><b>Modulos</b></h2>
+        <hr style="width:50px;border:5px solid gray" class="w3-round">
+
+        <p>
+            Los modulos se pueden considerar como una libreria.
+            Un modulo solo puede contener funciones, objetos, variables, etc.  
+            Tiene muchas ventajas ya que tu puedes usar tus modulos en tu aplicación o modulos de terceros conocidos como <b>npm</b>. 
+        </p>
+        
+        <h3>Creando modulos</h3>
+        
+        <h4>Ejemplo 01</h4>
+        <p>Se va crear un sencillo programa que realice las funciones basicas de una calculadora. </p>
+          
+        <p><b>matematica.js</b></p>
+        <div class="w3-code jsHigh notranslate">
+            var PI=3.14;<br>
+            <br>
+            function sumar(x1,x2){<br>
+                return x1 + x2;<br>
+            }<br>
+            <br>
+            function restar(x1,x2){<br>
+                return x1 - x2;<br>
+            }<br>
+            <br>
+            function dividir(x1,x2){<br>
+                if(x2 == 0){<br>   
+                    mostrarErrorDivision();<br>
+                }else{<br>
+                    return x1 / x2;<br>
+                }<br>
+            }<br>
+            <br>
+            function mostrarErrorDivision(){<br>
+                console.log('no se puede dividir por cero');<br>
+            }<br>
+            exports.sumar = sumar;<br>
+            exports.restar = restar;<br>
+            exports.dividir = dividir;<br>
+            exports.PI = PI;<br>
+        </div>
+
+        <p>
+            El archivo matematica.js es nuestro modulo y hemos definido varias funciones que pueden ser rehutilizadas en otros archivos. <br>
+            Ahora creamos nuestra aplicación que llamaremos index.js y accederemos a la funciones del modulo matematica.js 
+        </p>
+
+        <p><b>index.js</b></p>
+        <div class="w3-code notranslate jsHigh">
+            var mat = require('./matematica');<br>
+            console.log('La suma de 2 + 2 = ' + mat.sumar(2,2));<br>
+            console.log('La resta de 4 - 1 = ' + mat.restar(4,1));<br>
+            console.log('La división de 6 / 3 = ' + mat.dividir(6,3));<br>
+            console.log('El valor de PI = ' + mat.PI);
+        </div>
+    
+        <div class="w3-black w3-text-white w3-container">
+            <p>
+                <span class="w3-text-blue">/Documents/NodeJS</span>$ node index.js <br>
+                La suma de 2 + 2 = 4 <br>
+                La resta de 4 - 1 = 3 <br>
+                La división de 6 / 3 = 2 <br>
+                El valor de PI = 3.14 
+            </p>
+        </div>
+        <br>
+
+        <h4>Ejemplo 02</h4>
+        <p>Crearemos un modulo que retorne la fecha y hora</p>
+          
+        <p><b>fecha.js</b></p>
+        <div class="w3-code jsHigh notranslate">
+            exports.myDateTime = function () { 
+                return Date(); 
+            };
+        </div>
+
+        <p><b>index.js</b></p>
+        <div class="w3-code notranslate jsHigh">
+                var http = require('http'); <br>
+                var dt = require('./fecha'); <br>
+                var servidor = http.createServer(function (req, res) { <br>
+                    res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+                    res.write("The date and time are currently: " + dt.myDateTime()); <br>
+                    res.end(); <br>
+                }); <br>
+                servidor.listen(8080);
+        </div>
+   
+        <div class="w3-black w3-text-white w3-container">
+            <p>
+                <span class="w3-text-blue">/Documents/NodeJS</span>$ node index.js <br>
+            </p>
+        </div>
+
+        <p>Para visualizar el resultado nos dirigimos al navegador y en la url colocamos localhost:8080</p>
+        
+        <!--NUCLEO DE NODEJS-->    
+        <div id="Nucleo" style="height:70px"></div>
+        <h2 class="w3-xxxlarge w3-text-gray"><b>Nucleo de NodeJS</b></h2>
+        <hr style="width:50px;border:5px solid gray" class="w3-round">
+
+        <p>
+            La plataforma Node.js incorpora una serie de módulos de uso muy común en los programas que los incorpora el núcleo de Node.js y que se encuentran codificados en C++ para mayor eficiencia. <br>
+            Para utilizar los módulos del núcleo también utilizamos la función require indicando el nombre del módulo. <br> 
+            Algunos de los módulos del núcleo de Node.js son: os, fs, http, url, net, path, process, dns etc..
+        </p>
+
+        <h4>Modulo OS</h4>
+        <p>
+            Emplear el módulo "os" que provee información básica del sistema donde se ejecuta la plataforma del Node.js.
+        </p>
+
+        <p><b>index.js</b></p>
+        <div class="w3-code notranslate jsHigh">
+            var os = require('os'); <br>
+            console.log('Sistema operativo:' + os.platform()); <br>
+            console.log('Versión del sistema operativo:' + os.release()); <br>
+            console.log('Memoria total:'+ os.totalmem() + ' bytes'); <br>
+            console.log('Memoria libre:'+ os.freemem() + ' bytes');
+        </div>
+
+        <div class="w3-black w3-text-white w3-container">
+            <p>
+                <span class="w3-text-blue">/Documents/NodeJS</span>$ node index.js <br>
+                Sistema operativo:linux <br>
+                Versión del sistema operativo:4.4.0-109-generic <br>
+                Memoria total:4038193152 bytes <br>
+                Memoria libre:464412672 bytes
+            </p>
+        </div>
+
+        <!--HTTP-->    
+        <div id="http" style="height:70px"></div>
+        <h2 class="w3-xxxlarge w3-text-gray"><b>Modulo http</b></h2>
+        <hr style="width:50px;border:5px solid gray" class="w3-round">
+
+        <h3>Protocolo HTTP</h3>
+        <p>
+            HTTP - Protocolo de transferencia de hipertexto 
+            Permie la transferencia de un servidor con un navegador 
+            Cuando accedemos a un sitio web lo que podemos llegar a ver en el url es: <br>
+            http://host[:puerto][/ruta y archivo][?parámetros] 
+            <li>Http - indica el protocolo de transferencia </li>
+            <li>Host - es el nombre del dominio, por ejemplo google.com </li>
+            <li>Puerto - numero que por lo general no lo disponemos ya que por defecto el protocolo usa el nro 80. </li>
+            <li>Ruta y archivos - lugar donde se encuentra la pagina solicitada. </li>
+            <li>Parametros - datos que son enviados desde el navegador al servidor, por ejemplo formularios.</li>
+        </p>
+
+        <h3>Servidor Web Node</h3>
+        <p>
+            Cuando se trabaja con node nosotros mismo codificamos nuestro servidor(muy distinto a como se trabaja con php o asp que usan IIS o Apache). 
+        </p>
+
+        <p><b>index.js</b></p>
+        <div class="w3-code notranslate jsHigh">
+            var http = require('http'); <br>
+            var servidor; <br>
+            servidor = http.createServer(function(req, res){ <br>
+                res.writeHead(200, {'Content-Type' : 'text/html'}); <br>
+                res.write('\<br>
+                &lt;html&gt;\<br>
+                &lt;body&gt;\<br>
+                &lt;h1&gt; Node JS &lt;/h1&gt;\<br>
+                &lt;p&gt; Mis primeros pasos con node js &lt;/p&gt;\<br>
+                &lt;/body&gt;\<br>
+                &lt;/html&gt;'); <br>
+                res.end(); <br>
+            }); <br>
+            servidor.listen(8080);
+        </div>
+
+        <div class="w3-black w3-text-white w3-container">
+            <p>
+                <span class="w3-text-blue">/Documents/NodeJS</span>$ node index.js <br>
+            </p>
+        </div>
+
+        <!--FS-->    
+        <div id="fs" style="height:70px"></div>
+        <h2 class="w3-xxxlarge w3-text-gray"><b>Sistema de archivos</b></h2>
+        <hr style="width:50px;border:5px solid gray" class="w3-round">
+
+        <p>
+            El modulo de administracion de archivos "fs", este implementa la programacion asincrona para procesar su creacion. 
+            Te permite trabajar con el sistema de archivos del servidor o pc convencional.     
+        </p>
+
+        <h3>Modulo fs</h3>
+        
+        <p>Comunmente se usa este modulo para: </p>
+                
+        <li>Read - Leer archivos </li>            
+        <li>Create - Crear archivos </li>          
+        <li>Update - Actualizar archivos </li>            
+        <li>Delete - Borrar archivos </li>            
+        <li>Rename - Renombrar archivos </li>
+                        
+        <h3>Read File</h3>
+            
+        <p>
+            Para leer archivos usamos el metodo <span class="w3-text-red">fs.readFile() </span> <br>
+            Crearemos un archivo html y lo leeremos atravez de node.  
+        </p>
+
+        <p><b>index.html</b></p>
+        <div class="w3-code notranslate htmlHigh">
+            &lt;!DOCTYPE html&gt; <br>
+            &lt;html&gt; <br>
+            &lt;body&gt; <br>
+            &lt;h1&gt;Encabezado&lt;/h1&gt; <br>
+            &lt;p&gt;parrafo&lt;/p&gt; <br>
+            &lt;/body&gt; <br>
+            &lt;/html&gt;
+        </div>                
+            
+        <p><b>index.js</b></p>
+        <div class="w3-code notranslate jsHigh">
+            var http = require('http'); <br>
+            var fs = require('fs'); <br>
+            var servidor; <br>
+            servidor = http.createServer(function (req, res) { <br>
+                fs.readFile('index.html', function(err, data) { <br>
+                res.writeHead(200, {'Content-Type': 'text/html'}); <br>
+                res.write(data); <br>
+                return res.end(); <br>
+                }); <br>
+            }); <br>
+            servidor.listen(8080); <br>
+        </div>
+
+        <div class="w3-black w3-text-white w3-container">
+                <p>
+                    <span class="w3-text-blue">/Documents/NodeJS</span>$ node index.js <br>
+                </p>
+        </div>
+
+        <br>     
+
+        <h3>Create File </h3>
+        
+        <p>
+            Este usa los siguientes metodos: 
+        </p>    
+
+        <li>fs.appendFile()</li>
+        <li>fs.writeFile()</li>
+        <li>fs.open()</li>
+
+        <p>
+            El metodo <span class="w3-text-red">fs.appendFile()</span> agrega contenido a un archivo, 
+            en caso de que no existe dicho archivo lo crea.         
+        </p>                
+            
+        <p><b>index.js </b></p>
+        <div class="w3-code notranslate jsHigh">
+            var fs = require('fs'); <br>
+            fs.appendFile('note.txt', 'Hola Mundo!', function (err) { <br>
+                if (err) throw err; <br>
+                console.log('Contenido guardado'); <br>
+            }); 
+        </div>
+        
+        <div class="w3-black w3-text-white w3-container">
+            <p>
+                <span class="w3-text-blue">\Documents\NodeJS</span>$ node index.js <br>
+                Archivo creado 
+            </p>
+        </div>
+        
+        <p>
+            El metodo <span class="w3-text-red">fs.writeFile()</span> como lo dice su nombre escribe un archivo, 
+            en caso si quisieramos aumentar contenido a un archivo ya existente, este va a remplazar su contenido, 
+            pero en caso no exista va a crear uno nuevo 
+        </p> 
+                       
+        <p><b>index.js </b></p>
+        
+        <div class="w3-code notranslate jsHigh">
+            var fs = require('fs');  <br>
+            fs.writeFile('note.txt', 'Hola Mundo', function (err) {          <br>
+                if (err) throw err;             <br>
+                console.log('Archivo creado'); <br>
+            }); 
+        </div>
+
+        <div class="w3-black w3-text-white w3-container">
+            <p>
+                <span class="w3-text-blue">\Documents\NodeJS</span>$ node index.js <br>
+                Archivo creado
+            </p>
+        </div>            
+
+        <br>
+
+        <h3>Update File </h3>
+            
+        <p>
+            Tenemos a los dos metodos ya mencionados 
+        </p>
+
+        <li>fs.appendFile() </li>    
+                    
+        <p>
+            Diferencias, en el caso del appendFile() esta llama al archivo y sigue escribiendolo sin remplazar o borrar su contenido, el caso del writeFile() es todo lo contrario ya que este remplaza todos los datos dentro del documento. 
+        </p>                
+            
+        <p><b>index.js </b></p>
+        <div class="w3-code notranslate jsHigh">
+            var fs = require('fs');  <br>
+            fs.appendFile('demo.txt', ' \nThis is my text.', function (err) { <br>
+                if (err) throw err; <br>
+                console.log('Contenido actualizado'); <br>
+            }); 
+        </div>
+        <div class="w3-black w3-text-white w3-container">
+            <span class="w3-text-blue">\Documents\NodeJS</span>$ node update.js     <br>
+            Updated! 
+        </div>
+            
+        <h3>Delete Files </h3>
+        <p>
+            Para borrar un archivo utilizamos el metodo fs.unlink()     
+        </p> 
+            
+        <p><b>borrar.js</b></p>
+        <div class="w3-code notranslate jsHigh">
+            var fs = require('fs'); <br>            
+            fs.unlink('demo.txt', function (err) {             <br>
+                if (err) throw err;             <br>
+                console.log('Eliminado'); <br>
+            }); 
+        </div>                
+        <div class="w3-container w3-black w3-text-white">
+            <p>
+                <span class="w3-text-blue">\Documents\NodeJS</span>$ node borrar.js             <br>
+                Eliminado 
+            </p>
+        </div>
+                
+        <h3>Rename Files</h3>
+        <p>
+        Usamos el metodo fs.rename() 
+        </p>
+
+        <p><b>renombrar.js </b></p>
+        <div class="w3-code notranslate jsHigh">
+            var fs = require('fs');             
+            fs.rename('demo.txt','demo_v02.txt', function (err) {             
+                if (err) throw err;         
+                console.log('nombre cambiado');             
+            });             
+        </div>
+        <div class="w3-container w3-text-white w3-black">
+            <p>
+            <span class="w3-text-blue">\Documents\NodeJS</span>$ node renombrar.js      <br>
+            Nombre cambiado                 
+            </p>
+        </div>
+        
+            <!--URL-->    
+        <div id="url" style="height:70px"></div>
+        <h2 class="w3-xxxlarge w3-text-gray"><b>Modulo url</b></h2>
+        <hr style="width:50px;border:5px solid gray" class="w3-round">
+
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque accumsan, augue ut fermentum dictum, velit mi lobortis purus, vel finibus ante nisi eget neque. Pellentesque ullamcorper lobortis molestie. Nulla quis ullamcorper purus. Curabitur pellentesque nibh non urna luctus, non ullamcorper sem posuere. Fusce dui nisi, sollicitudin sed sollicitudin vel, mattis in leo. Donec dignissim enim quis rhoncus placerat. Curabitur pretium feugiat libero id pellentesque. Sed convallis, mauris ut venenatis ultricies, magna dui sagittis eros, vel luctus magna risus non libero. Aliquam eu urna quam. Aliquam ante odio, congue sit amet ante nec, consectetur suscipit odio. Morbi ac mauris ipsum. Fusce gravida lacinia quam a feugiat.
+            Mauris facilisis, lectus ut vehicula finibus, risus risus laoreet ex, nec tempor nisi sem sed neque. In condimentum posuere metus. Nullam ultricies enim ac pretium facilisis. Curabitur vulputate erat nibh, non volutpat nisl aliquet luctus. Vivamus elementum arcu eu efficitur lobortis. Maecenas et commodo urna. Curabitur eget efficitur felis. Ut a ligula sollicitudin, auctor lectus et, auctor dui. Vestibulum non nulla finibus, euismod nisi et, posuere augue. Phasellus lobortis nulla leo, vitae suscipit est hendrerit et. Nunc magna sapien, ultrices et molestie vitae, tempor quis dolor.                
+            Aliquam porta dolor eget rhoncus fermentum. In nec arcu tempor sapien molestie sollicitudin. Cras lobortis, nibh in pellentesque volutpat, quam ligula fermentum est, eu volutpat lacus nisl dapibus sapien. Donec in sagittis nunc. Etiam mauris sem, auctor placerat nulla sit amet, varius fringilla dolor. Phasellus non magna maximus elit fermentum aliquet. Praesent congue diam eu enim hendrerit vestibulum. Vestibulum nec libero ut nulla iaculis suscipit et sed ante. Aliquam et nunc id mauris facilisis varius.
+        </p>
+
+    </div>
+</body>
+
+<script src="https://www.w3schools.com/lib/w3.js"></script>
+<script src="https://www.w3schools.com/lib/w3codecolor.js"></script>
+<script>w3CodeColor();</script>
+
+</html>

@@ -1,0 +1,109 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <title>Menu desplegable</title>
+        <!--This is CSS interno-->
+        <style type="text/css">
+            /*Estilos Globales/Generales*/
+            *{padding: 0;margin: 0}
+            
+            /*Cabecera*/
+            #header{
+                margin: auto;
+                width: 500px;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+        
+            /*Quitar diseño*/
+            ul, ol{list-style: none;}
+            
+            /*Navegador*/
+            .navegador li a{
+                background-color: black;
+                color: #fff;
+                text-decoration: none;
+                padding: 10px 15px /*altura largo*/;
+                display: block/*Se crea un bloque por elemento*/;
+            }
+            /*Los li que esten directos en navegador se iran debajo de sus superiores*/
+            .navegador > li{
+                float: left;
+            }
+            
+            /*Efecto al pasar el mouse*/
+            .navegador li a:hover{
+                background-color: #434343;
+            }
+            
+            /*Diseño de los submenus*/
+            .navegador li ul{
+                display: none/*ocultamos los submenus*/;
+                position: absolute/*Este funciona con min-width y evita que se deforme el menu dandole una posicion absoluta*/;
+                min-width: 140px/*Agrandar el tamaño del bloque de los submenus*/;
+            }
+            
+            /*El hover es un efecto que se activa al pasar el mouse*/
+            /*Al pasar el mouse sobre li los ul que estan en ese li se mostraran mediante el display: block*/
+            /*Mostrar los submenus al pasar el mouse*/
+            .navegador li:hover > ul{
+                display: block;
+            }
+            
+            /*Diseño de los submenus de los submenus*/
+            .navegador li ul li{position: relative;/*todos los li que esten dentro de un ul que estan dentro de un li se pueden modificar mediante las propiedades de abajo*/}
+            .navegador li ul li ul{
+                right: -140px/*lo mandas hacia la derecha con la medida de los submenus en negativo para que se vallan al costado*/;
+                top: 0;
+            }
+        </style>
+    </head>
+    <body>
+        
+        <div id="header">
+            <ul class="navegador">
+                <li><a href="">Inicio</a>
+                    <ul>
+                        <li><a href="">Submenu1</a></li>
+                        <li><a href="">Submenu2</a></li>
+                        <li><a href="">Submenu3</a></li>
+                        <li><a href="">Submenu4</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Servicios</a>
+                    <ul>
+                        <li><a href="">Submenu1</a></li>
+                        <li><a href="">Submenu2</a></li>
+                        <li><a href="">Submenu3</a></li>
+                        <li><a href="">Submenu4</a>
+                            <ul>
+                                <li><a href="">Submenu1</a></li>
+                                <li><a href="">Submenu2</a></li>
+                                <li><a href="">Submenu3</a></li>
+                                <li><a href="">Submenu4</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+                <li><a href="">Acerca de</a>
+                    <ul>
+                        <li><a href="">Submenu1</a></li>
+                        <li><a href="">Submenu2</a></li>
+                        <li><a href="">Submenu3</a></li>
+                        <li><a href="">Submenu4</a></li>
+                    </ul>
+                </li>
+                <li><a href="">Contacto</a>
+                    <ul>
+                        <li><a href="">Submenu1</a></li>
+                        <li><a href="">Submenu2</a></li>
+                        <li><a href="">Submenu3</a></li>
+                        <li><a href="">Submenu4</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        
+    </body>
+</html>
+      

@@ -1,0 +1,75 @@
+img {
+    max-width: 100%;
+}
+
+.quitar-float{
+    float: none;
+}
+.espacio-arriba{
+    margin-top: 100px;
+}
+.Passion-One{
+    font-family: 'Passion One', cursive;
+}
+.grande{
+    font-size: 60px;
+}
+.celeste{
+    color: #3CD2E8;   
+}
+.verde{
+    color: #46BD4C;   
+}
+
+.fondo{
+    background-color: #F2F0CE;
+}
+
+.espacio-derecha{
+    margin-right: 1em;
+}
+
+.no-lista li{
+    list-style-type: none;
+}
+.color-cabezal{
+    background-color: #CFEAFF;
+}
+.padding-largo{
+    padding: 5px 10px;
+}
+
+.inline-block{
+    /**Con esta clase podremos centrar lo que son las clomunas de la pagina menu y declararla en cada lista*/
+    float: none; 
+    display: inline-block;
+    margin-right: -4px;
+}
+
+.posicion-superior{
+    /**Solo funcione si el ibjeto a posicionar se encuentra dentro de un inline block*/
+    vertical-align: top;
+}
+
+.letra-mediana{
+    font-size: 24px;
+}
+
+.retrasa-animacion1{
+    -moz-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s; 
+    /*Retrasa la animacion el -moz y -webkit se usa para que la animacion sirve en navegadores como mozilla espartar etc*/
+}
+
+.retrasa-animacion2{
+    -moz-animation-delay: 2s;
+    -webkit-animation-delay: 2s;
+    animation-delay: 2s; 
+    /*Retrasa la animacion el -moz y -webkit se usa para que la animacion sirve en navegadores como mozilla espartar etc*/
+}
+
+
+
+
+

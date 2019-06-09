@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Jason Mora_Portafolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="class.css">
+    <link rel="stylesheet" href="medias.css">            
+
+</head>    
+<body>                            
+    <section class="col-3 soporte_menu"></section>
+    <section id="menu_lat" class="col-3 text_center cont_izq">
+        <!--<img class="logo" src="IMG/brand.png" />-->
+        <nav class="menu">
+            <a href="#about_me">
+                <li class="menu_01">ACERCA DE MI</li>
+            </a>
+            <a href="#portafolio">
+                <li>PORTAFOLIO</li>
+            </a>
+            <a href="#flash">
+                <li>DISEÑO</li>
+            </a>
+            <a href="#contact">
+                <li>CONTACTAME</li>
+            </a>
+        </nav>
+    </section>            
+    <section class="col-9 cont_der">
+
+        <!--PRIMER ARTICULOS-->
+        <article>  
+            <div class="col-4 cont_imagen">
+            <img class=" imagen" src="IMG/work/1.JPG"/>    
+            </div>
+            <div class="col-4 cont_imagen">
+            <img class=" imagen" src="IMG/work/2.JPG"/>    
+            </div>
+            <div class="col-4 cont_imagen">
+            <img class=" imagen" src="IMG/work/3.JPG"/>    
+            </div>
+            <div class="col-4 cont_imagen">
+            <img class=" imagen" src="IMG/work/4.JPG"/>    
+            </div>
+            <div class="col-4 cont_imagen">
+            <img class=" imagen" src="IMG/work/5.JPG"/>    
+            </div>
+            <div class="col-4 cont_imagen">
+            <img class=" imagen" src="IMG/work/6.JPG"/>    
+            </div>
+        </article>        
+        <!--/-->
+        
+        
+        <!--SEGUNDO ARTICULO-->
+        <article id="about_me" class="col-12 about">
+            <h1>ACERCA DE MI</h1>
+            <p>Hola mi nombre es Jaison, actualmente estudio la carrera de computacion e informmatica, soy a un gran afisionado a las nuevas tecnologias, es uno de mis hobbies aparte del deporte. En estos momentos estoy armando mi portafolio para que tenga la mejor pinta posible junto con un canal de youtube donde colocare los mejores tutoriales en la cual pueda unir los conocimientos informaticas con las tecnologias electronicas y electricas</p>
+            <p>Sigueme en:</p>
+            <div class="col-12 cont_follow">
+                <a href="https://www.facebook.com/jasonjair.moramora" target="_blank">
+                    <img class="follow" src="IMG/follow/Facebook.png">    
+                </a>
+                <a href="https://plus.google.com/u/0/100222716983197750913" target="_blank">
+                    <img class="follow" src="IMG/follow/Google%20Plus.png">
+                </a>
+                <a href="https://www.youtube.com/channel/UClpUfzMlZdnZJVlEEu5wE8w" target="_blank">
+                    <img class="follow" src="IMG/follow/YouTube1.png">
+                </a>
+            </div>
+        </article>
+        <!--/-->
+        
+        
+        <!--TERCER ARTICULO-->
+        <article id="portafolio" class="col-12 portafolio">
+            <h1>MI PORTAFOLIO</h1>
+            <p style="text-align:center;">Mis Conocimientos</p>
+            
+            <div class="col-4 cont_cono">
+                <img src="IMG/portafolio/know/html5.png"/>
+            </div>
+            <div class="col-4 cont_cono">
+                <img src="IMG/portafolio/know/css3.png"/>
+            </div>    
+            <div class="col-4 cont_cono">
+                <img src="IMG/portafolio/know/javascript-logo.png"/>
+            </div>
+            <p class="cont_text">Sigue mis proyectos a travez de mi cuenta de gitHub, en mi canal de youtube subire un video de como utilizar github para que puedas gestionar tu proyectos</p>
+            <div id="git">
+                <img style="width:300px;border: 1px #555555 solid; padding: 10px;" src="IMG/portafolio/github.png">    
+                <br/>
+                <button class="buttonb">GitHub</button>                
+            </div>
+        </article>
+        <!--/-->
+        
+        <!--DISEÑO-->
+        <article>
+            <embed id="flash" src="animaciones/web_flash.swf" style="height:1010px; width:100%; margin:auto;text-align:center;">
+        </article>
+        <!--/-->
+        
+        
+        <!--CONTACTO-->
+        <article id="contact" class="col-12 contact">
+            <h1>CONTACTAME</h1>
+            <form>
+                <label>E-mail</label><br/>
+                <input type="text" class="textBox"/>
+                <br/>
+                <label>Asunto</label><br/>
+                <input type="text" class="textBox"/>
+                <br/>
+                <label>Mensaje</label><br/>
+                <textarea class="textArea"></textarea>
+                <br/>
+                <br/>
+                <button style="width:100%; height:50px; cursor:pointer; font-weight:bold">ENVIAR</button>
+            </form>
+        </article>
+        <!--/-->
+        
+        <!--MAPA GOOGLE-->
+        <article id="map" class="map col-12">
+        </article>
+        <script src="GoogleMaps.js"></script>
+        <script src="https://maps.googleapis.com/maps/api/js?callback=myMap"></script>
+        <!--/-->
+    </section>
+</body>
+</html>

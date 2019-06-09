@@ -1,0 +1,61 @@
+/*Caracteristicas generales*/
+* {margin: 0; padding: 0; box-sizing: border-box;}
+body {display: flex; min-height: 100vh; background: #EFC076;}
+
+/*Contenedor*/
+#c-slider {
+	margin: auto;/*Centrar*/
+	width: 85%;/*Tamaño responsivo*/
+	max-width: 900px;/*Tamaño maximo del contenedor*/
+	position: relative;/*La posicion es relativa para poder posicionar de manera absoluta a los botones izquierda y derecha*/
+	overflow: hidden;/*Ocultamos las imagenes que salen del contenedor*/
+	box-shadow: 0 0 0 10px #fff, 0 15px 50px;/*El efecto del marco y la sombra*/
+}
+
+#slider {
+    /*Prefijos para que funciones en otro navegadores*/
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+	display: flex;
+	width: 400%;/*Son cuatro imagenes por lo tanto el contenedor debe tener el 400% de tamaño completo*/
+}
+
+#slider section {
+	width: 100%;/*Cada seccion contiene una imagen por lo tanto debe de tener el 100%*/
+}
+
+#slider img {
+	display: block;/*Ubicamos la imagen dentro de un bloque*/
+	width: 100%;/*el ancho de la imagen debe igualarse al del bloque*/
+	height: 100%;/*el alto de la imagen debe igualarse al del bloque*/
+}
+
+/*Botones derecha e izquierda*/
+#btn-prev, #btn-next {
+	width: 40px;/*ancho*/
+	height: 40px;/*alto*/
+	background: rgba(255, 255, 255, 0.7);/*fondo blanco con transparencia del 70%*/
+	position: absolute;/*para posicionar por encima del c-slider*/
+	top: 50%;/*colocar en el medio del c-slider*/
+	transform: translateY(-50%);/*Centra al centro del c-slider*/
+	line-height: 40px;
+	font-size: 30px;
+	font-weight: bold;
+	text-align: center;/*Texto centrado*/
+	border-radius: 50%;/*Borde circular*/
+	font-family: monospace;/*Tipo de letra*/
+	cursor: pointer;/*A la hora de pasar el cursor que aparesca una mano*/
+}
+
+#btn-prev:hover, #btn-next:hover { 
+	background: rgba(255, 255, 255, 1);/*a la hora de pasar el mouse se le quitaa la transparencia ya que esta al 100%*/
+}
+
+#btn-prev {
+	left: 10px;
+}
+#btn-next {
+	right: 10px;
+}

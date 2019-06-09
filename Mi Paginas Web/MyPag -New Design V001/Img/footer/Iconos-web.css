@@ -1,0 +1,8 @@
+#container li {
+background-image: url("Iconos-web.png");
+    background-repeat: no-repeat;   
+    list-style: none outside none;
+}	
+.sprite-YouTube1{background-position:0px 0px ; width: 128px ; height: 128px; }
+.sprite-Facebook{background-position:-138px 0px ; width: 128px ; height: 128px; }
+.sprite-Google-Plus{background-position:-276px 0px ; width: 128px ; height: 128px; }

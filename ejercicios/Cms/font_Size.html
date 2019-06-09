@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Titulo de la pagina</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />    
+        <style>
+            /*Estilos generales*/
+            html, body {
+                height: 100%;
+                width: 100%;
+            }
+            body {
+                font-family: 'calibri';
+                color: #262626;
+                background: #f2f2f2; 
+                font-size: 1em;
+                line-height: 1.5em;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }    
+            *{
+                box-sizing: border-box;
+            }   
+            /*--//--Estilos generales*/
+            /*media*/
+            /* mobile phones: */
+            [class*="col-"] {
+                width: 100%;
+                float: left;
+            }
+            @media only screen and (min-width: 600px) {
+                /* tablets: */
+                .col-m-1 {width: 8.33%;}
+                .col-m-2 {width: 16.66%;}
+                .col-m-3 {width: 25%;}
+                .col-m-4 {width: 33.33%;}
+                .col-m-5 {width: 41.66%;}
+                .col-m-6 {width: 50%;}
+                .col-m-7 {width: 58.33%;}
+                .col-m-8 {width: 66.66%;}
+                .col-m-9 {width: 75%;}
+                .col-m-10 {width: 83.33%;}
+                .col-m-11 {width: 91.66%;}
+                .col-m-12 {width: 100%;}
+            }
+            @media only screen and (min-width: 768px) {
+                /* desktop: */
+                .col-1 {width: 8.33%;}
+                .col-2 {width: 16.66%;}
+                .col-3 {width: 25%;}
+                .col-4 {width: 33.33%;}
+                .col-5 {width: 41.66%;}
+                .col-6 {width: 50%;}
+                .col-7 {width: 58.33%;}
+                .col-8 {width: 66.66%;}
+                .col-9 {width: 75%;}
+                .col-10 {width: 83.33%;}
+                .col-11 {width: 91.66%;}
+                .col-12 {width: 100%;}
+            }
+            /*--//--medias*/
+            .button{
+                width: 50px;
+                height: 50px;
+                font-weight: bold;            
+                line-height: 50px;
+                margin: 0px 5px;                    
+            }
+            .txtArea{
+                width: 500px;
+                height: 200px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="border:1px black solid; padding: 10px;">
+            <button class="button" style="font-size:24px;" type="button" onclick="aumenta();">A+</button>
+            <button class="button" style="font-size:24px;" type="button" onclick="disminuye();">A-</button>
+        </div>
+        <br>        
+        <textarea class="txtArea" id="txtArea" style="font-size:24px; text-align:justify;"></textarea>
+                
+        <script>          
+            //GLOBAL
+            var font = document.querySelector('#txtArea');
+            var f = parseInt(font.style.fontSize);            
+            
+            function aumenta(){
+                var font_max = 48;
+                f = f + 2;
+                if(f>font_max){
+                    f = font_max;
+                }
+                var aum = document.getElementById('txtArea');
+                aum.style.fontSize = f + 'px';
+            }
+            function disminuye(){
+                var font_min = 8;
+                f = f - 2;
+                if(f<font_min){
+                    f = font_min;
+                }
+                var aum = document.getElementById('txtArea');
+                aum.style.fontSize = f + 'px';
+            }            
+        </script>
+    </body>
+</html>

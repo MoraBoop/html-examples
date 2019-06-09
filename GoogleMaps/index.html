@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>MAPA</title>
+</head>
+<body>
+    <div id="googleMap" style="width:100%;height:400px;"></div>    
+    <script>
+        //GOOGLE MAPS
+        function myMap(){
+            //Definimos el cuadro donde estara el mapa
+            var mCanvas = document.getElementById('googleMap');
+            var mCentrar = new google.maps.LatLng(51.508742,-0.120850);
+            var mPropiedades = {
+                center : mCentrar,
+                zoom : 12,
+            };
+            var mapa = new google.maps.Map(mCanvas, mPropiedades);
+            var marker = new google.maps.Marker({position:mCentrar});
+            marker.setMap(mapa);
+        }
+    </script>    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCTkwFTgcr4wO_80sF5Rk1xbz7e_ZuvL5M &callback=myMap"></script>
+</body>
+</html>

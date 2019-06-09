@@ -1,0 +1,177 @@
+/*----------------------LATERAL IZQUIERDA------------------------*/
+/*back del cont_izq*/
+.soporte_menu{
+    padding: 10px;
+}
+.cont_izq{
+    background: white;
+    padding: 150px 0px;
+    position: fixed;
+    height: 100%;
+    text-align: center;
+    line-height: 3em;
+    list-style: none;
+}
+.menu a{
+    text-decoration: none;
+    color: black;    
+    font-size: 18px;    
+}
+.menu a li{
+    height: 50px;    
+    width: 60%;
+    margin: 15px auto;
+    border-radius: 50px;
+}
+.menu_01{
+    background: #286275;
+}
+.menu a li:hover{
+    background: #286275;
+}
+.menu a li:active{
+    border: 1px #286275 solid;
+    background: white;
+    color: #286275;
+}
+/*----------------------LATERAL DERECHA------------------------*/
+.cont_der{
+    margin: 0;
+    padding: 0;
+}
+.cont_der article{
+    width: 100%;
+}
+/*PRIMER ARTICULO*/
+.cont_imagen{
+    position: relative;
+    padding: 0;
+    margin: 0;
+}
+.cont_imagen .imagen{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.cont_imagen:hover .imagen {
+    opacity: 0.85;
+}
+/*SEGUNDO ARTICULO*/
+.about{    
+    margin: 0;
+    padding: 0;
+    background: #286275;
+    height: auto;
+    color: white;    
+}
+.about h1{
+    font-size: 48px;
+    text-align: center;
+}
+.about p{
+    width: 60%;
+    text-align: justify;
+    margin: auto;
+    padding-bottom: 30px;
+}
+.cont_follow{
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.follow {    
+    border-radius: 50%;
+    margin: 10px;
+}
+.follow:hover{
+    background: rgba(255,255,255,0.2);
+}
+.follow:active{
+    background: rgba(223,117,152,0.2);
+}
+/*TERCER ARTICULO*/
+.portafolio{
+    background: #EEEEEE;    
+}
+.portafolio h1{
+    font-size: 48px;
+    text-align: center;
+}
+.portafolio .cont_cono{    /*Confguracion de los contenedores*/
+    padding: 50px;/*margenes dentro del contenedor*/    
+}
+.portafolio .cont_cono img{
+    height: auto;
+    width: 100%;
+    border-radius: 20%;/*redondeado del contenedor*/
+    border: 10px solid #fff;/*color y grosor del borde de las imagenes*/
+    padding: 30px;/*centrar mas la imagen y agrandar el contenedor para que no haiga conflicto con el radius*/
+}
+.cont_text{
+    width: 60%;
+    text-align: justify;
+    margin: auto;
+    padding-bottom: 30px;
+}
+#git{
+    margin: auto;
+    text-align: center;
+    margin-bottom: 40px;
+    width: 300px;
+}
+.portafolio .buttonb{
+    text-align: center; 
+    width: 100%;
+    text-decoration: none;
+    font-size: 16px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+    background-color: #555555;
+    color: white;
+    border: 2px solid #555555;
+    height: 50px;
+}
+.buttonb:hover {
+    background-color: white;
+    color: black;
+}
+
+
+/*FLASH*/
+
+
+
+/*CUARTO ARTICULO*/
+.contact{
+    background: #404040;
+    color: white;
+    padding-bottom: 50px;
+}
+.contact h1{
+    font-size: 48px;
+    text-align: center;
+}
+.contact form{
+    margin: auto;
+    width: 60%;
+}
+.textBox{
+    width: 100%;
+    height: 35px;
+}
+.button{
+    width: 100%;
+}
+.textArea{
+    width: 100%;
+    height: 200px;
+}
+/*QUITNO ARTICULO*/
+.map{
+    height: 400px;    
+    background: #EFCC00;
+}

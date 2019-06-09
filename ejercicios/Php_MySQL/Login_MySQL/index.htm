@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <title>Titulo de la pagina</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />                  
+    </head>
+    <body>
+        <!--JavaScript-->
+        <script src="limpia_txt.js"></script>
+        
+        <!--Etiquetas-->
+        <form action="action_page.php" method="post">
+            <div class="formulario">
+                <label class="label">Usuario</label>
+                <br />
+                <input name="txtUser" class="text" type="text" value="nombre de usuario" onclick="limpia_User(this);" onblur="verifica_User(this);">
+                <br /><br />
+                <label class="label">Contraseña</label>
+                <br />
+                <input name="txtPass" class="text" type="password" value="password" onclick="limpia_Pass(this);" onblur="verifica_Pass(this);">
+                <br /><br />
+                <button class="button" type="submit" name="btnIngresar">INGRESAR</button>                
+            </div>
+        </form>                
+    </body>
+</html>

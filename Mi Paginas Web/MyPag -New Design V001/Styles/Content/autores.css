@@ -1,0 +1,38 @@
+#autores{
+    padding: 40px;
+    background: #374859;
+}
+
+#autores #datos{
+    margin-right: 15px;
+    color: navajowhite;
+    width: 600px;
+    text-align: right;
+    padding: 30px 15px;/*alto hancho */
+}
+#autores #datos h5{
+    margin: 0;
+    font-size: 23px;
+}
+
+#autores #datos #subTitulo{
+    margin: 0;
+    font-size: 14px;
+}
+#autores #datos p{
+    margin: 0;
+    font-size: 18px;
+}
+
+#autores #contImagen{
+    margin-left: 20px;
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #fff;
+}
+#autores #contImagen img{
+    height: 250px;
+    width: 200px;
+}
